@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "LogOut";
+    Layout = "~/Views/Shared/commn_admin_layout.cshtml";
+}
+
+@*@{
+        Layout = null;
+    }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logout</title>
+    <script src="~/content/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <script>window.history.forward();
+            window.setTimeout(500, window.location.href="/General/login");</script>
+    </div>
+</body>
+</html>
+
+

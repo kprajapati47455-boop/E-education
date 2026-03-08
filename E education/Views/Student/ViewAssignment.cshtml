@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "ViewAssignment";
+    Layout = "~/Views/Shared/Common_Studentlayout.cshtml";
+}
+
+ 
+@using E_education.Models
+@model List<Tbl_uploadAssignment>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<body style="background:  linear-gradient(to right, aqua, whitesmoke); min-height: 100vh;">
+    <div class="hero-section" data-aos="zoom-in" data-aos-duration="1300"
+         style="margin-top:40px; text-align: center; padding: 80px 20px; color: #fff; background: linear-gradient(135deg, #1a73e8, #0f4c75); border-radius: 10px; margin-bottom: 40px;">
+
+        <h1 style="font-size: 40px; font-weight: bold; font-family:'Times New Roman', Times, serif;"><strong>View Assignment Module</strong></h1>
+        <h2><span id="typed"></span></h2>
+        <p style="font-size: 18px; margin-top: 10px;font-size:18px; font-family:'Times New Roman', Times, serif;">This module manage assignment module</p>
+    </div>
+
+    <div class="row my-3" data-aos="fade-up" data-aos-duration="1300">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <h3 class="text-light bg-warning text-center p-4">View Assignment</h3>
+            <table class="table table-striped">
+                <tr>
+                    <th>Sno.</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Upload Date</th>
+                    <th>Download</th>
+                </tr>
+                @{
+                    int Sno = 1;
+                    foreach (Tbl_uploadAssignment jm in Model)
+                    {
+                        <tr>
+                            <td>@Sno</td>
+                            <td>@jm.Title</td>
+                            <td>@jm.Description</td>
+                            <td>@jm.Upload_DT</td>
+                            <td><a href="/Student/DownloadAssignment?filename=@jm.FileName"><i class="fa-solid fa-file-export"></i></a></td>
+                        </tr>
+                        Sno++;
+                    }
+                }
+            </table>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+

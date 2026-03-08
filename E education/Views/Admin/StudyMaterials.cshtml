@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "StudyMaterials";
+    Layout = "~/Views/Shared/commn_admin_layout.cshtml";
+}
+
+
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .form-wrapper {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+        .form-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: white 0px 30px 40px -10px;
+        }
+
+    .btn-primary:hover {
+        background-color: #004bbd;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .study-material-section {
+        background-image: url('/image/formbackground.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    @*@media (max-width: 768px) {
+        .form-wrapper {
+            padding: 20px;
+        }
+    }*@
+</style>
+<body style="background-color: mediumpurple;">
+    <div class="hero-section" data-aos="zoom-in" data-aos-duration="1000"
+    <div class="hero-section" data-aos="zoom-in" data-aos-duration="1000"
+         style="margin-top:40px; text-align: center; padding: 80px 20px; color: #fff; background: linear-gradient(135deg, #1a73e8, #0f4c75); border-radius: 10px; margin-bottom: 40px;">
+
+        <h1 style="font-size: 40px; font-weight: bold;font-family:'Times New Roman', Times, serif;"><strong>Study Material Module</strong></h1>
+        <h2><span id="typed"></span></h2>
+        <p style="font-size: 18px; margin-top: 10px;font-size:18PX; font-family:'Times New Roman', Times, serif">This module manage study materials</p>
+    </div>
+    <div class="container-fluid study-material-section">
+        <div class="row justify-content-center w-100">
+            <div class="col-12 col-md-8 col-lg-6" style="border: 1px solid rgb(165, 190, 204); border-radius: 20px; color: rgb(5, 5, 5); padding: 0; background-color: rgba(150, 183, 239, 0.9); box-shadow: black 0px 20px 30px -10px;">
+                <div class="form-wrapper">
+                    <p class="text-center text-primary">@ViewBag.Message</p>
+                    <form action="/Admin/StudyMaterials" method="post" enctype="multipart/form-data">
+                        <h2 class="text-center mb-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">Study Material</h2>
+
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title of Study Material</label>
+                            <input type="text" class="form-control" id="title" name="Subject" placeholder="Enter title" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject of Study Material</label>
+                            <input type="text" class="form-control" id="subject" name="Title" placeholder="Enter subject" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="desc" class="form-label">Description</label>
+                            <textarea name="Description" id="desc" class="form-control" rows="4" placeholder="Enter description" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Upload File</label>
+                            <input type="file" class="form-control" id="file" name="FileName" required>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+

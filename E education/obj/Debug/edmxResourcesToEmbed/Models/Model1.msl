@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EducationDBModelStoreContainer" CdmEntityContainer="EducationDBEntities">
+    <EntitySetMapping Name="Feedback_Tbl">
+      <EntityTypeMapping TypeName="EducationDBModel.Feedback_Tbl">
+        <MappingFragment StoreEntitySet="Feedback_Tbl">
+          <ScalarProperty Name="Feedback_Id" ColumnName="Feedback_Id" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Feedback_DT" ColumnName="Feedback_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration_Master">
+      <EntityTypeMapping TypeName="EducationDBModel.Registration_Master">
+        <MappingFragment StoreEntitySet="Registration_Master">
+          <ScalarProperty Name="Email_id" ColumnName="Email_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="College" ColumnName="College" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="pic_Upload" ColumnName="pic_Upload" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Registered_on" ColumnName="Registered_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Notification">
+      <EntityTypeMapping TypeName="EducationDBModel.Tbl_Notification">
+        <MappingFragment StoreEntitySet="Tbl_Notification">
+          <ScalarProperty Name="Notification_Id" ColumnName="Notification_Id" />
+          <ScalarProperty Name="Noti_Message" ColumnName="Noti_Message" />
+          <ScalarProperty Name="Noti_DT" ColumnName="Noti_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_uploadAssignment">
+      <EntityTypeMapping TypeName="EducationDBModel.Tbl_uploadAssignment">
+        <MappingFragment StoreEntitySet="Tbl_uploadAssignment">
+          <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Upload_Id" ColumnName="Upload_Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Upload_DT" ColumnName="Upload_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Login">
+      <EntityTypeMapping TypeName="EducationDBModel.Tbl_Login">
+        <MappingFragment StoreEntitySet="Tbl_Login">
+          <ScalarProperty Name="UType" ColumnName="UType" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Email_id" ColumnName="Email_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_uploadstudyMaterial">
+      <EntityTypeMapping TypeName="EducationDBModel.Tbl_uploadstudyMaterial">
+        <MappingFragment StoreEntitySet="Tbl_uploadstudyMaterial">
+          <ScalarProperty Name="Upload_DT" ColumnName="Upload_DT" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Material_id" ColumnName="Material_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Enquiry">
+      <EntityTypeMapping TypeName="EducationDBModel.Tbl_Enquiry">
+        <MappingFragment StoreEntitySet="Tbl_Enquiry">
+          <ScalarProperty Name="Enquiry" ColumnName="Enquiry" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Enquiry_id" ColumnName="Enquiry_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin_UploadAssignment">
+      <EntityTypeMapping TypeName="EducationDBModel.Admin_UploadAssignment">
+        <MappingFragment StoreEntitySet="Admin_UploadAssignment">
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Upload_Dt" ColumnName="Upload_Dt" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Upload_id" ColumnName="Upload_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

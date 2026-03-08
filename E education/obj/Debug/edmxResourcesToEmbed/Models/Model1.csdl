@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EducationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Feedback_Tbl">
+    <Key>
+      <PropertyRef Name="Feedback_Id" />
+    </Key>
+    <Property Name="Feedback_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="Feedback_DT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Feedback_Tbl1" Relationship="Self.FK_Feedback_Tbl_Feedback_Tbl" FromRole="Feedback_Tbl" ToRole="Feedback_Tbl1" />
+    <NavigationProperty Name="Feedback_Tbl2" Relationship="Self.FK_Feedback_Tbl_Feedback_Tbl" FromRole="Feedback_Tbl1" ToRole="Feedback_Tbl" />
+    <NavigationProperty Name="Registration_Master" Relationship="EducationDBModel.FK_Feedback_Tbl_Registration_Master" FromRole="Feedback_Tbl" ToRole="Registration_Master" />
+  </EntityType>
+  <EntityType Name="Registration_Master">
+    <Key>
+      <PropertyRef Name="Email_id" />
+    </Key>
+    <Property Name="Email_id" Type="String" MaxLength="350" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="College" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Course" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_No" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="pic_Upload" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Registered_on" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Feedback_Tbl" Relationship="EducationDBModel.FK_Feedback_Tbl_Registration_Master" FromRole="Registration_Master" ToRole="Feedback_Tbl" />
+  </EntityType>
+  <EntityType Name="Tbl_Notification">
+    <Key>
+      <PropertyRef Name="Notification_Id" />
+    </Key>
+    <Property Name="Notification_Id" Type="Int32" Nullable="false" />
+    <Property Name="Noti_Message" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Noti_DT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_uploadAssignment">
+    <Key>
+      <PropertyRef Name="Upload_Id" />
+    </Key>
+    <Property Name="Upload_Id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Upload_DT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SubmittedBy" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Feedback_Tbl_Feedback_Tbl">
+    <End Role="Feedback_Tbl" Type="Self.Feedback_Tbl" Multiplicity="1" />
+    <End Role="Feedback_Tbl1" Type="Self.Feedback_Tbl" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Feedback_Tbl">
+        <PropertyRef Name="Feedback_Id" />
+      </Principal>
+      <Dependent Role="Feedback_Tbl1">
+        <PropertyRef Name="Feedback_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EducationDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Feedback_Tbl" EntityType="Self.Feedback_Tbl" />
+    <EntitySet Name="Registration_Master" EntityType="Self.Registration_Master" />
+    <EntitySet Name="Tbl_Notification" EntityType="Self.Tbl_Notification" />
+    <EntitySet Name="Tbl_uploadAssignment" EntityType="Self.Tbl_uploadAssignment" />
+    <AssociationSet Name="FK_Feedback_Tbl_Feedback_Tbl" Association="Self.FK_Feedback_Tbl_Feedback_Tbl">
+      <End Role="Feedback_Tbl" EntitySet="Feedback_Tbl" />
+      <End Role="Feedback_Tbl1" EntitySet="Feedback_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Feedback_Tbl_Registration_Master" Association="EducationDBModel.FK_Feedback_Tbl_Registration_Master">
+      <End Role="Registration_Master" EntitySet="Registration_Master" />
+      <End Role="Feedback_Tbl" EntitySet="Feedback_Tbl" />
+    </AssociationSet>
+    <EntitySet Name="Tbl_Login" EntityType="EducationDBModel.Tbl_Login" />
+    <EntitySet Name="Tbl_uploadstudyMaterial" EntityType="EducationDBModel.Tbl_uploadstudyMaterial" />
+    <EntitySet Name="Tbl_Enquiry" EntityType="EducationDBModel.Tbl_Enquiry" />
+    <EntitySet Name="Admin_UploadAssignment" EntityType="EducationDBModel.Admin_UploadAssignment" />
+  </EntityContainer>
+  <Association Name="FK_Feedback_Tbl_Registration_Master">
+    <End Type="EducationDBModel.Registration_Master" Role="Registration_Master" Multiplicity="0..1" />
+    <End Type="EducationDBModel.Feedback_Tbl" Role="Feedback_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration_Master">
+        <PropertyRef Name="Email_id" />
+      </Principal>
+      <Dependent Role="Feedback_Tbl">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="Email_id" />
+    </Key>
+    <Property Name="Email_id" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="360" FixedLength="false" Unicode="false" />
+    <Property Name="UType" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_uploadstudyMaterial">
+    <Key>
+      <PropertyRef Name="Material_id" />
+    </Key>
+    <Property Name="Material_id" Type="Int32" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Upload_DT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Enquiry">
+    <Key>
+      <PropertyRef Name="Enquiry_id" />
+    </Key>
+    <Property Name="Enquiry_id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_No" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Enquiry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Admin_UploadAssignment">
+    <Key>
+      <PropertyRef Name="Upload_id" />
+    </Key>
+    <Property Name="Upload_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Upload_Dt" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "StudentManagement";
+    Layout = "~/Views/Shared/commn_admin_layout.cshtml";
+}
+
+@using E_education.Models
+@model List<Registration_Master>
+<body style="background-color: mediumpurple;">
+    <div class="hero-section" data-aos="zoom-in" data-aos-duration="1000"
+    <div class="hero-section" data-aos="zoom-in" data-aos-duration="1000"
+         style="margin-top:40px; text-align: center; padding: 80px 20px; color: #fff; background: linear-gradient(135deg, #1a73e8, #0f4c75); border-radius: 10px; margin-bottom: 40px;">
+
+        <h1 style="font-size: 40px; font-weight: bold; font-family:'Times New Roman', Times, serif;"> <strong>Student Management Module</strong></h1>
+        <h2><span id="typed"></span></h2>
+        <p style="font-size: 18px; margin-top: 10px; font-family:'Times New Roman', Times, serif;">This module manage student all enquiries!</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+
+            <table class="table table-stiped table-hover">
+                <tr>
+                    <th>Sno.</th>
+                    <th>Name</th>
+                    <th>Pic</th>
+                    <th>EmailId</th>
+                    <th>College</th>
+                    <th>Year</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                    <th>Registration_On</th>
+                </tr>
+                @{
+                    int sno = 1;
+                    foreach(Registration_Master rm in Model)
+                    {
+                        <tr>
+                            <td>@sno</td>
+                            <td>@rm.Name</td>
+                            <td>
+                                <img src="/content/pic/@rm.pic_Upload" style="height:50px;width:50px;border-radius:50px;" />
+                            </td>
+                            <td>@rm.Email_id</td>
+                            <td>@rm.College</td>
+                            <td>@rm.Year</td>
+                            <td>@rm.DOB</td>
+                            <td>@rm.Address</td>
+                            <td>@rm.Registered_on</td>
+                        </tr>
+                        sno++;
+                    }
+                }
+
+            </table>
+        </div>
+        <div class="col-sm-1"></div>
+
+    </div>
+    </div>
+</body>
+

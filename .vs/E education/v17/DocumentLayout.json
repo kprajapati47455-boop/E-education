@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\krishna.net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|c:\\users\\hp\\desktop\\krishna.net\\e education\\views\\admin\\notificationmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|solutionrelative:e education\\views\\admin\\notificationmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|c:\\users\\hp\\desktop\\krishna.net\\e education\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|solutionrelative:e education\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|c:\\users\\hp\\desktop\\krishna.net\\e education\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|solutionrelative:e education\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|c:\\users\\hp\\desktop\\krishna.net\\e education\\models\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|solutionrelative:e education\\models\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|c:\\users\\hp\\desktop\\krishna.net\\e education\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED6F473-13A6-4F9E-93D2-6A597FAFA320}|E education\\E education.csproj|solutionrelative:e education\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "E education\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "E education\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAkwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T12:01:34.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "E education\\Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "E education\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-02-26T11:57:45.842Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Model1.tt",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Models\\Model1.tt",
+              "RelativeDocumentMoniker": "E education\\Models\\Model1.tt",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Models\\Model1.tt",
+              "RelativeToolTip": "E education\\Models\\Model1.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-26T11:51:29.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotificationManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Views\\Admin\\NotificationManagement.cshtml",
+              "RelativeDocumentMoniker": "E education\\Views\\Admin\\NotificationManagement.cshtml",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Views\\Admin\\NotificationManagement.cshtml",
+              "RelativeToolTip": "E education\\Views\\Admin\\NotificationManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T11:43:06.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GeneralController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Controllers\\GeneralController.cs",
+              "RelativeDocumentMoniker": "E education\\Controllers\\GeneralController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\krishna.net\\E education\\Controllers\\GeneralController.cs",
+              "RelativeToolTip": "E education\\Controllers\\GeneralController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T03:33:27.468Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

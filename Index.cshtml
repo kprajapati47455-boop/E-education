@@ -1,0 +1,234 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/common_generallayout.cshtml";
+}
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    #btnmodal {
+        position:fixed;
+        top: 600px;
+        transform: rotate(270deg);
+        left: -20px;
+        padding: 5px;
+        font-size: 20px;
+        z-index:1;
+    }
+</style>
+<!--row for notification start-->
+<div data-aos="fade-up" class="row" style="background-color: #e0ebeb">
+    <div class="col-sm-2 bg-primary">
+        <h4>Notification</h4>
+    </div>
+    <div class="col-sm-10 m-0 p-0">
+        <marquee class=" text-light">
+            <img src="~/content/images/new.png" style="height:30px; text-decoration:blink" />
+            <a href="#" class="text-dark" style="text-decoration:none;">Start your learning with best guidence</a>
+        </marquee>
+       
+    </div>
+</div>
+<!--row for notification end-->
+<!--row for slider start-->
+<div data-aos="fade-up" class="row">
+    <div class="col-sm-12 p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/content/images/slider2.jpg" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/content/images/slider1.jpg" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/content/images/slider3.png" class="d-block w-100" alt="image" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!--row for slider end-->
+<!--row for add card-->
+<div data-aos="fade-up" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/start ler.jpg" style="height:200px;" />
+            <div class="card-body">
+                <h4 class="card-title">Start Learning</h4>
+                <p class="card-text">
+                    Kickstart your learning journey today!
+                    Access high-quality courses, expert guidance, and interactive lessons — all in one place. Learning has never been this easy.
+                </p>
+                <a href="/General/NewStudent" class="btn btn-primary">Enroll Now</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/cources.jpeg" style="height:200px;" />
+            <div class="card-body">
+                <h4 class="card-title">Our Cources</h4>
+                <p class="card-text">
+                    Explore a wide range of expertly designed courses that match your learning goals.
+                    Whether you're a beginner or looking to upskill, we have something for everyone — from academic subjects to professional skills and competitive exam prep. Learn at your pace, from anywhere, anytime.
+                </p>
+                <a href="/General/NewStudent" class="btn btn-primary">Enroll Now</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/faculty.jpeg" style="height:200px;" />
+            <div class="card-body">
+                <h4 class="card-title">support faculty</h4>
+                <p class="card-text">
+                    Learn from the best in the field.
+                    Our faculty comprises experienced educators, subject-matter experts, and industry professionals who are passionate about teaching and mentoring students to succeed.
+                </p>
+                <a href="/General/ContactUs" class="btn btn-primary">Help</a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div data-aos="fade-up" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/programing.jpeg" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+                <h4 class="card-title">Programing</h4>
+                <p class="card-text">
+                    Master the language of the future.
+                    Our programming courses are designed to take you from fundamentals to advanced concepts, preparing you for real-world software development, tech interviews, and freelancing.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/datas.jpeg " class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+                <h4 class="card-title">Data Science</h4>
+                <p class="card-text">Learn how to collect, analyze, and visualize data to make smart, real-world decisions. Our Data Science course covers everything from Python programming and statistics to machine learning and data visualization tools like Pandas, NumPy, and Power BI.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="~/content/images/design.jpeg" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+                <h4 class="card-title">Design</h4>
+                <p class="card-text"> Learn the art and science of visual storytelling. Our Design courses help you master tools like Photoshop, Illustrator, Figma, and Canva — along with design principles like color theory, typography, layout, and user experience (UX/UI).</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--row cards end-->
+<!--row for testimonials start-->
+<div class="row mt-4">
+    <div class=" col-sm-4">
+        <div class="card p-2">
+            <h3 class=" text-center"><i class="bi bi-book-fill"></i>Notes</h3>
+            <p>Easy, exam-ready notes for all technical subjects. we will provide you best study material</p>
+            <a href="/notes">Explore Notes</a>
+        </div>
+    </div>
+    <div class="col-sm-4 p-2">
+        <div class="card p-2">
+            <h3 class=" text-center">📝 Quizzes</h3>
+            <p>Test your knowledge with topic-wise MCQs. And make your mind powerfull</p>
+            <a href="/quizzes">Take a Quiz</a>
+        </div>
+    </div>
+    <div class="col-sm-4 p-2">
+        <div class="card p-2">
+            <h3 class="txt-center">📺 Videos</h3>
+            <p>Watch tutorials & practical labs explained simply with experts.</p>
+            <a href="/videos">Watch Now</a>
+        </div>
+    </div>
+</div>
+<!--row for main content start-->
+<div data-aos="fade-up" class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h1 class="text-primary p-2 text-center mt-3 " style="font-family:'Times New Roman', Times, serif">About Us</h1>
+        <p>
+            <b>  E-Education,</b> also known as digital learning or online education, refers to the use of technology to deliver educational content and facilitate learning beyond the traditional classroom. It encompasses web-based learning, mobile learning apps, virtual classrooms, and multimedia resources, making education more accessible, flexible, and engaging.
+
+        </p>
+        <p>In today’s fast-paced, technology-driven world, education must evolve to meet modern needs. E-Education addresses key challenges in the traditional system and empowers learners with:</p>
+        <p><b>E-Education</b> is transforming how knowledge is delivered, making learning more inclusive, engaging, and future-ready. While it comes with its own set of challenges, the potential of digital learning to democratize education is immense. When implemented effectively, e-education becomes not just an alternative, but a powerful complement to traditional learning methods.</p>
+    </div>
+</div>
+
+<div class="col-sm-2"></div>
+<!--row gor main content-->
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnmodal">
+    Enquery
+</button>-->
+
+<!-- Modal -->
+<!--<div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/General/SaveEnquery" method="post">
+                    <input type="text" placeholder="Enter your name" class="form-control" /><br />
+                    <input type="email" placeholder="Enter your email" class="form-control" /><br />
+                    <input type="number" placeholder="Enter your mobno" class="form-control" /><br />
+                    <textarea placeholder="Enter your message" class="form-control"></textarea><br />
+                    <input type="submit" value="save changes" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>-->

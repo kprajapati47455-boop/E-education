@@ -1,0 +1,233 @@
+﻿
+@{
+    ViewBag.Title = "NewStudent";
+    Layout = "~/Views/Shared/common_generallayout.cshtml";
+}
+<style>
+    .err{
+        color:red;
+    }
+    span{
+        font-size:10px;
+    }
+
+</style>
+<script>
+    $(document).ready(function () {
+        $("#sub").click(function () {
+             
+            var stname, stcollege, stemail, stadd, stmob, stpass, stvalue, stcpass, stdob;
+            var haserror = false;
+
+            stname = $("#sname").val().trim();
+            stcollege = $("#scollege").val().trim();
+            stemail = $("#semail").val().trim();
+            stadd = $("#sadd").val().trim();
+            stmob = $("#smob").val().trim();
+            stpass = $("#spass").val().trim();
+            stvalue = $("#syear").val().trim();
+            stcpass = $("#cpass").val().trim();
+            stdob = $("#dob").val().trim();
+            $('.err').remove();
+            // validation name
+            if (stname.length == 0) {
+                $("#sname").after("<span class='err''>Please enter your name</span>");
+                haserror = true;
+
+            }
+            else if (stname.length < 2) {
+                $("#sname").after("<span class='err'>Please enter valid name</span>");
+                haserror = true;
+            }
+            if (stcollege.length == 0) {
+                $("#scollege").after("<span class='err'>Please enter your college</span>");
+                haserror = true;
+            }
+            else if (stcollege.length < 4) {
+                $("#scollege").after("<span class='err'>Please enter correct college name</span>");
+                haserror = true;
+            }
+            if (stemail.length == 0) {
+                $("#semail").after("<span class='err'>Please enter your email</span>");
+                haserror = true;
+            }
+            if (stmob.length == 0) {
+                $("#smob").after("<span class='err'>Please enter your mobile number</span>");
+                haserror = true;
+            }
+            else if (stmob.length != 10) {
+                $("#smob").after("<span class='err'>Mobile number must have contain exact 10 digit</span>");
+                haserror = true;
+            }
+            else {
+                var fdigit = parseInt(stmob.charAt(0));
+                if (!(fdigit >= 6 && fdigit <= 9)) {
+                    $("#smob").after("<span class='err'>Please enter valid mobile number</span>");
+                    haserror = true;
+                }
+            }
+
+            if (stpass.length == 0) {
+                $("#spass").after("<span class='err'>Please enter your password</span>");
+                haserror = true;
+            }
+            else if (stpass.length < 8) {
+                $("#spass").after("<span class='err'>Password must atlist 8 digit and character</span>");
+                haserror = true;
+            }
+            if ($("#male").prop("checked") == false && $("#female").prop("checked") == false) {
+                $("#sgen").after("<span class='err'>Please check your gender</span>");
+                haserror = true;
+            }
+            if (stadd.length == 0) {
+                $("#sadd").after("<span class='err'>Please enter your address </span>");
+                haserror = true;
+            }
+            else if (stadd.length < 10) {
+                $("#sadd").after("<span class='err'>Please enter full address</span>");
+                haserror = true;
+            }
+            if (stcpass.length == 0) {
+                $("#cpass").after("<span class='err'>Please enter confirm password</span>");
+                haserror = true;
+            }
+            else if (stcpass.length < 8) {
+                $("#cpass").after("<span class='err'>Pasword must 8 digit and character</span>");
+                haserror = true;
+            }
+            if (stdob.length == 0) {
+                $("#dob").after("<span class='err'>Enter your date of birth</span>");
+                haserror = true;
+            }
+            if (!haserror) {
+                $("form").requestsubmit();
+
+
+            }
+
+            })
+    })
+</script>
+<style>
+    body{
+        background-color:beige;
+    }
+    .btn:hover {
+        box-shadow:3px 3px 3px green;
+    }
+    #btn1:hover{
+        box-shadow:3px 3px 3px darkred;
+    }
+
+</style>
+
+<div class="row p-4" id="main">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h1 class="text-primary text-center" style="font-family:'Times New Roman', Times, serif"> Student Registration</h1>
+        <p style="color:green;font-size:20px; text-align:center;">@ViewBag.RMessage</p>
+        <form action="/General/NewStudent" method="post" enctype="multipart/form-data">
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <input type="text" id="sname" placeholder="Enter name" name="Name"
+                           class="form-control" />
+
+                </div>
+                <div class="col-sm-6">
+                    <span class="form-control" name="Gender" id="sgen">
+                        Gender:&ensp;<input type="radio" value="Male" id="male" name="rdb" />Male&ensp;&ensp;
+                        <input type="radio" value="Female" id="female" name="rdb" />Female
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <input type="text" placeholder="Enter college" id="scollege" name="college"
+                           class="form-control" />
+
+                </div>
+                <div class="col-sm-6">
+                   <input type="email" id="semail" name="Email_id" placeholder="Enter Email" class="form-control"/>
+                    
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <select id="syear" name="Year" class="form-control">
+                        <option value=" ">choose year</option>
+                        <option value="First">First</option>
+                        <option value="Second">Second</option>
+                        <option value="Third">Third</option>
+                        <option value="Fourth">Fourth</option>
+                    </select>
+                </div>
+                <div class=" col-sm-6">
+                    <select id="scourse" name="Course" class="form-control">
+                        <option value=" ">choose Course</option>
+                        <option value="Btech">BTECH</option>
+                        <option value="Mtech">MTECH</option>
+                        <option value="Bca">BCA</option>
+                        <option value="Mca">MCA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <input type="number" id="smob" placeholder="Enter mobile number" name="Mobile_No" class="form-control" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="date" id="dob" placeholder="Enter Date Of Birth" class="form-control" name="DOB" />
+                </div>
+            </div>
+            <div class=" row mt-3">
+                <div class="col-sm-6">
+                    <input type="file" name="file_upload" class="form-control" />
+                </div>
+                <div class="col-sm-6">
+                    <textarea name="Address" id="sadd" placeholder="Enter adddress" class="form-control"style="resize:none"></textarea>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <input type="password" name="Pass" id="spass" placeholder=" Enter password" class="form-control" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="password" name="cpass" id="cpass" placeholder=" Confirm password" class="form-control" />
+                </div>
+            </div>
+            <div class=" row mt-3">
+                <div class="col-sm-6">
+                    <span class=" form-control">
+                        <img src="@ViewBag.Message" style="height:28px;width:90px;" id="cimage"/>
+                        <img src="~/content/images/ref.png"id="rimage" style="height:20px;"/>
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" id="scap" placeholder="Enter Captcha" name="Captcha" class="form-control" />
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <div class="col-sm-3">
+                    <input type="submit" id="sub" value="Register Now" class=" btn form-control" style="background-color:forestgreen" />
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <input type="reset" value=" Reset" id="btn1" class="btn form-control bg-danger" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#rimage").click(function () {
+            $.getJSON("/General/getimagecaptcha", function (data) {
+                $("#cimage").attr("src", data);
+            })
+        })
+    })
+</script>
+

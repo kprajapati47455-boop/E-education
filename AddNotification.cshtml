@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "AddNotification";
+    Layout = "~/Views/Shared/commn_admin_layout.cshtml";
+}
+<style>
+    .btn:hover{
+        box-shadow:3px 3px 3px blue;
+    }
+    body {
+        background-color: #b3f0ff;
+    }
+</style>
+        <div class="row mt-4">
+            <div class="col-sm-3 "></div>
+            <center>
+                <form action="/Admin/AddNotification" method="post">
+                   
+                    <div class="col-sm-6 mt-2"
+                         style="border: 1px solid black; border-radius: 20px; padding: 30px; background-color: #cceeff;box-shadow:5px 5px 5px blue; ">
+                        
+                        <h1 class="text-center" style="font-family: 'Times New Roman', Times, serif; color: black;">
+                            <i class="bi bi-bell-fill"></i>Notification
+                        </h1>
+                        <h5 class=" text-success">@ViewBag.Message</h5>
+                        <div class="mb-3">
+                            <textarea class="form-control"style="resize:none" name="Noti_Message" placeholder="Write here Notification......"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary btn-lg mt-2 w-100">Add notification</button>
+                        </div>
+                    </div>
+                </form>
+            </center>
+            <div class="col-sm-3"></div>
+        </div>
+    
